@@ -1,0 +1,147 @@
+<div>
+  <div class="source-tips jimu-ellipsis" title="${nls.searchLayerTips}" data-dojo-attach-point="tipsNode">
+    <em>${nls.searchLayerTips}</em>
+  </div>
+  <div class="source-details-section">
+    <table class="source-table">
+        <tr>
+            <td class="first">
+                <span class="source-label">${nls.customQueryService}</span>
+            </td>
+            <td class="second">
+                <div data-dojo-attach-point="sourceUrl" data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props="required:true,trim:true,style:{width:'100%'}"></div>
+            </td>
+        </tr>
+      <tr>
+        <td class="first">
+          <span class="source-label">${nls.name}</span>
+        </td>
+        <td class="second">
+          <div data-dojo-attach-point="sourceName" data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props="trim:true,required:true,style:{width:'100%'}"></div>
+        </td>
+      </tr>
+      <tr>
+        <td class="first">
+          <span class="source-label">${nls.placeholder}</span>
+        </td>
+        <td class="second">
+          <div data-dojo-attach-point="placeholder" data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props="trim:true,style:{width:'100%'}"></div>
+        </td>
+      </tr>
+      <tr>
+        <td class="first">
+          <span class="source-label">${nls.customQueryParam}</span>
+        </td>
+        <td class="second">
+          <div class="search-fields">
+              <div data-dojo-attach-point="queryParam" data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props="required:true,trim:true,style:{width:'95%'}"></div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+            <td class="first">
+                <span class="source-label">${nls.customQueryResultsIdentifierField}</span>
+            </td>
+            <td class="second">
+                <div class="search-fields">
+                    <div data-dojo-attach-point="customQueryResultsIdentifierField" data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props="required:true,trim:true,style:{width:'95%'}"></div>
+                </div>
+            </td>
+        </tr>
+      <tr>
+        <td class="first">
+          <span class="source-label">${nls.displayField}</span>
+        </td>
+        <td class="second">
+            <div data-dojo-attach-point="displayFields" data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props='required:true,trim:true,style:{width:"100%"}'></div>
+        </td>
+      </tr>
+        <tr>
+            <td class="first">
+                <span class="source-label">${nls.queryResponseFormat}</span>
+            </td>
+            <td class="second">
+                <div class="search-fields">
+                    <div data-dojo-attach-point="queryResponseFormat" data-dojo-type="dijit/form/Select" data-dojo-props="required:true,trim:true,style:{width:'95%'}"></div>
+                </div>
+            </td>
+        </tr>
+    </table>
+  </div>
+  <div class="source-details-section" style="border-top:1px solid #ccc;position:relative;width:100%;padding-top:20px;margin-top:10px; ">
+      <table class="source-table">
+          <tr>
+              <td class="first">
+                  <span class="source-label">${nls.geometrySourceUrl}</span>
+              </td>
+              <td class="second">
+                  <div data-dojo-attach-point="geometrySourceUrl" data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props='trim:true,style:{width:"100%"}'></div>
+              </td>
+          </tr>
+          <tr>
+              <td class="first">
+                  <span class="source-label">${nls.geometrySourceQueryField}</span>
+              </td>
+              <td class="second">
+                  <div data-dojo-attach-point="geometrySourceQueryField" data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props='trim:true,style:{width:"100%"}'></div>
+              </td>
+          </tr>
+          <tr>
+              <td class="first">
+                  <span class="source-label">${nls.extendedQueryUrl}</span>
+              </td>
+              <td class="second">
+                  <div data-dojo-attach-point="extendedQueryUrl" data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props='trim:true,style:{width:"100%"}'></div>
+              </td>
+          </tr>
+          <tr>
+              <td class="first">
+                  <span class="source-label">${nls.extendedQueryField}</span>
+              </td>
+              <td class="second">
+                  <div data-dojo-attach-point="extendedQueryField" data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props='trim:true,style:{width:"100%"}'></div>
+              </td>
+          </tr>
+          <tr>
+              <td class="first">
+                  <span class="source-label">${nls.queryResponseFormat}</span>
+              </td>
+              <td class="second">
+                  <div class="search-fields">
+                      <div data-dojo-attach-point="extendedQueryResponseFormat" data-dojo-type="dijit/form/Select" data-dojo-props="required:true,trim:true,style:{width:'95%'}"></div>
+                  </div>
+              </td>
+          </tr>
+      </table>
+  </div>
+    <div class="source-details-section" style="border-top:1px solid #ccc;position:relative;width:100%;padding-top:20px;margin-top:10px; ">
+        <table class="source-table" style="display:none;" data-dojo-attach-point="scaleSelection" cellspacing="0">
+            <tbody>
+                <tr>
+                    <td class="first" style="padding-top:10px;width:120px;">${nls.zoomToScale}</td>
+                    <td class="second" style="padding-top:10px;">
+                        <label>1 :</label> <input type="text" data-dojo-type="dijit/form/NumberTextBox" data-dojo-attach-point="scaleValue" value="${nls.defaultZoomToScale}" data-dojo-props='style:{trim:true,width:"100px"}' />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="source-table" style="display:none;" data-dojo-attach-point="zoomToFeatureExtent" cellspacing="0">
+            <tbody>
+                <tr>
+                    <td class="first" style="padding-top:10px;width:120px;">${nls.zoomToFeatureExtent}</td>
+                    <td class="second" style="padding-top:10px;">
+                        <label>Add :</label>
+                        <input type="text" data-dojo-type="dijit/form/NumberTextBox" data-dojo-attach-point="extentPadding" value="${nls.defaultExtentPadding}" data-dojo-props='style:{trim:true,width:"50px"}' /> %
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  <div data-dojo-attach-point="shelter" data-dojo-type="jimu/dijit/LoadingShelter" data-dojo-props="hidden:true"></div>
+</div>
+
+
+
+
+
+

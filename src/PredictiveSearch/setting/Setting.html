@@ -1,0 +1,130 @@
+<div>
+    <table cellspacing="0" class="minchar-setting">
+        <tbody>
+            <tr>
+                <td class="first">${nls.minCharToSearch}</td>
+                <td class="second">
+                    <input type="text" data-dojo-type="dijit/form/NumberTextBox"
+                           data-dojo-attach-point="minCharToSearch"
+                           data-dojo-props="style:{width:'50px',marginLeft:'10px'}" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table cellspacing="0" class="moredata-setting">
+        <tbody>
+            <tr>
+                <td class="first">${nls.moreDataMaxLimit}</td>
+                <td class="second">
+                    <input type="text" data-dojo-type="dijit/form/NumberTextBox"
+                           data-dojo-attach-point="moreDataMaxLimit"
+                           data-dojo-props="style:{width:'50px',marginLeft:'10px'}" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+    <div class="symbology-chooser-title">${nls.symbologySectionTitle}</div>
+    <div class="symbology-chooser-section">
+        <table cellspacing="0">
+            <tbody>
+                <tr>
+                    <td class="first">${nls.pointSymbol}</td>
+                    <td class="second">
+                        <div class="second" data-dojo-attach-point="pointSymbolPicker" data-dojo-type="jimu/dijit/SymbolPicker" data-dojo-props="type: 'marker'"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="first">${nls.polyLineSymbol}</td>
+                    <td class="second">
+                        <div class="second" data-dojo-attach-point="polyLineSymbolPicker" data-dojo-type="jimu/dijit/SymbolPicker" data-dojo-props="type: 'line'"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="first">${nls.polygonSymbol}</td>
+                    <td class="second">
+                        <div class="second" data-dojo-attach-point="polygonSymbolPicker" data-dojo-type="jimu/dijit/SymbolPicker" data-dojo-props="type: 'fill'"></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="indicator-chooser-title">${nls.indicatorSectionTitle}</div>
+    <div class="indicator-chooser-section">
+        <table cellspacing="0">
+            <tbody>
+                <tr>
+                    <td class="first">${nls.indicatorCheck}</td>
+                    <td class="second">
+                        <div data-dojo-type="jimu/dijit/CheckBox"
+                             data-dojo-attach-point="indicatorIsVisible"
+                             data-dojo-props="style:{marginLeft:'25px'}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="first">${nls.indicatorSymbol}</td>
+                    <td class="second">
+                        <div class="second" data-dojo-attach-point="indicatorSymbolPicker" data-dojo-type="jimu/dijit/SymbolPicker" data-dojo-props="type: 'marker', style:{marginLeft:'15px'}"></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="results-display-title">${nls.resultsDisplay}</div>
+    <div class="results-display-section">
+        <table cellspacing="0">
+            <tbody>
+                <tr>
+                    <td>
+                        <div data-dojo-type="jimu/dijit/RadioBtn" data-dojo-attach-point="displayPopup" data-dojo-props="group: 'resultsView'" />
+                    </td>
+                    <td>${nls.displayPopup}</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div data-dojo-type="jimu/dijit/RadioBtn" data-dojo-attach-point="displayResultsPanel" data-dojo-props="group: 'resultsView'" />
+                    </td>
+                    <td>${nls.displayResultsPanel}</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div data-dojo-type="jimu/dijit/RadioBtn" data-dojo-attach-point="displayNoResults" data-dojo-props="group: 'resultsView'" />
+                    </td>
+                    <td>${nls.displayNoResults}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+	<div class="instruction">
+		<p>${nls.instruction}</p>
+	</div>
+	<div class="dropdown-button" role="button">
+		<div class="button">
+			<span class="button-text">${nls.add}</span>
+		</div>
+		<ul class="dropdown-menu" role="menu" data-dojo-attach-event="click:_onMenuItemClick">
+			<li class="dropdown-item" type="query">${nls.searchableLayer}</li>
+			<li class="dropdown-item" type="locator">${nls.geocoder}</li>
+            <li class="dropdown-item" type="custom">${nls.customQuery}</li>
+		</ul>
+	</div>
+	<div class="sources">
+		<div class="source-list jimu-float-leading">
+            <div class="source-list-table" data-dojo-type="jimu/CustomUtils/SimpleTable" data-dojo-attach-point="sourceList" data-dojo-attach-event="row-delete:_onSourceItemRemoved,row-select:_onSourceItemSelected" data-dojo-props='autoHeight:false,selectable:true,fields:[{name:"name",title:"${nls.name}",width:"auto",type:"text",editable:false},{name:"actions",title:"",width:"70px",type:"actions",actions:["up","down","delete"]}]' style="height:100%;"></div>
+		</div>
+		<div class="source-setting jimu-float-trailing" data-dojo-attach-point="sourceSettingNode"></div>
+	</div>
+    <table style="position:relative;float:left;">
+        <tbody>
+            <tr>
+                <td data-dojo-type="jimu/dijit/CheckBox" data-dojo-attach-point="displayManifestInfo"></td>
+                <td class="label">${nls.displayManifestInfo}</td>
+            </tr>
+        </tbody>
+    </table>    
+	<div data-dojo-attach-point="shelter" data-dojo-type="jimu/dijit/LoadingIndicator" data-dojo-props="hidden:true"></div>
+</div>

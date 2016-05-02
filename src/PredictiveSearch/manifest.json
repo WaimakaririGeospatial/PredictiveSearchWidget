@@ -1,0 +1,18 @@
+{
+  "name": "PredictiveSearch",
+  "platform": "HTML",
+  "client":"GISCO",
+  "version": "1.4",
+  "wabVersion": "1.4",
+  "developedAgainst":"1.3",
+  "devVersion":"12082",
+  "author": "Esri R&D Center Beijing,extended by GBS",
+  "description": "",
+  "copyright": "",
+  "license": "http://www.apache.org/licenses/LICENSE-2.0",
+  "properties": {
+    "inPanel": false,
+	"hasVersionManager": false,
+	"supportMultiInstance": false
+  }
+}
